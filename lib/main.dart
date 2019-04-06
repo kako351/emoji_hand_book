@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
 import 'dart:convert';
 import 'package:emoji_hand_book/emoji.dart';
-import 'package:clipboard_manager/clipboard_manager.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MaterialApp(home: HomeWidget()));
@@ -34,14 +34,12 @@ class EmojiListState extends State<HomeWidget> {
                       var emojiInfo = parser.get(emojis.datas[index].text);
                       return GestureDetector(
                           onTap: () {
-                            ClipboardManager.copyToClipBoard(
-                                    emojis.datas[index].text)
-                                .then((result) {
-                              final snackBar = SnackBar(
-                                content: Text('Copied to Clipboard'),
-                              );
-                              Scaffold.of(context).showSnackBar(snackBar);
-                            });
+                            final data = ClipboardData(text: emojis.datas[index].text);
+                            final snackBar = SnackBar(
+                              content: Text('Copied to Clipboard'),
+                            );
+                            Clipboard.setData(data);
+                            Scaffold.of(context).showSnackBar(snackBar);
                           },
                           child: Container(
                             padding: EdgeInsets.all(20),
