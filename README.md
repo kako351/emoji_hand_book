@@ -1,6 +1,6 @@
 # Emoji Hand Book
 
-
+![](introduction.gif)
 
 - It is an application that is easy to check Emoji code.
 - This is useful when you do not know the emoji code you want to use on slack or github.
