@@ -1,16 +1,12 @@
-# emoji_hand_book
+# Emoji Hand Book
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+- It is an application that is easy to check Emoji code.
+- This is useful when you do not know the emoji code you want to use on slack or github.
+- Supports copy to clipboard.
 
-A few resources to get you started if this is your first Flutter project:
+## OSS
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- flutter_emoji
+   - MIT @ 2019 Pete Houston. https://pub.dartlang.org/packages/flutter_emoji
